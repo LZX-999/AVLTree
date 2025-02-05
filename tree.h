@@ -40,12 +40,7 @@ private:
 public:
     // Constructor
     Tree();
-
-    // Rule of three:
-    // If a class requires a user-defined destructor, a user-defined copy
-    // constructor, or a user-defined copy assignment operator, it almost
-    // certainly requires all three.
-
+    
     // Destructor
     ~Tree();
 
@@ -162,7 +157,6 @@ private:
         root->sum = left + right + curr;
     }
 
-    // Feel free to declare helper functions here, if necessary
     Node<T>* leftRotate(Node<T>* root) {
         Node<T>* newRoot = root->right;
         root->right = newRoot->left;
